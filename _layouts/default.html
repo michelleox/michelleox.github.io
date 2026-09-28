@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: "pt-BR" }}">
-  {%- include head.html -%}
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>
+    {%- if page.title -%}
+      {{ page.title }}
+    {%- else -%}
+      {{ site.title }}
+    {%- endif -%}
+  </title>
+
+  {%-seo title=false-%}
+  {%-feed_meta-%}
+
+  <link rel="shortcut icon" type="image/x-icon" href="{{ site.favicon | relative_url }}" />
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}" />
+
+</head>
   <body a="{{ site.theme_config.appearance | default: "auto" }}">
     <main class="page-content" aria-label="Content">
       <div class="w">
@@ -17,5 +36,9 @@
         <script type="text/javascript" src="{{ site.baseurl }}/assets/js/{{ js_file }}.js"></script>
       {% endfor %}
     {% endif %}
+
+    <!-- My custom CSS styles -->
+
+
   </body>
 </html>
