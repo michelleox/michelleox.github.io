@@ -1,0 +1,15 @@
+<header class="site-header">
+  <h1><a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+  {% if include.banner and site.banner_image %}
+    {% if site.banner_url and site.banner_url != '' %}
+      <a class="ad-banner" href="{{ site.banner_url }}" target="_blank" rel="sponsored noopener">
+        <img src="{{ site.banner_image | relative_url }}" width="460" height="60" alt="{{ site.banner_alt | escape }}">
+      </a>
+    {% else %}
+      <div class="ad-banner">
+        <img src="{{ site.banner_image | relative_url }}" width="460" height="60" alt="{{ site.banner_alt | escape }}">
+      </div>
+    {% endif %}
+  {% endif %}
+  {% if include.description %}<p>{{ site.description }}</p>{% endif %}
+</header>

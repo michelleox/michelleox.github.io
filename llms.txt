@@ -1,0 +1,24 @@
+---
+layout: null
+permalink: /llms.txt
+---
+# {{ site.title }}
+
+> {{ site.description }}
+
+Site: {{ site.url }}
+Language: pt-BR
+Author: {{ site.author }}
+
+## Conteúdo principal
+
+- [Página inicial]({{ '/' | absolute_url }})
+- [Arquivo de publicações]({{ '/arquivos.html' | absolute_url }})
+- [Tags]({{ '/tags.html' | absolute_url }})
+- [Feed Atom]({{ '/feed.xml' | absolute_url }})
+- [Sitemap]({{ '/sitemap.xml' | absolute_url }})
+
+## Publicações recentes
+{% for post in site.posts limit:20 %}
+- [{{ post.title }}]({{ post.url | absolute_url }}): {{ post.excerpt | strip_html | strip_newlines | truncate: 180 }}
+{% endfor %}

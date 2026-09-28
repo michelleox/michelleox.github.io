@@ -1,0 +1,18 @@
+---
+layout: default
+title: Publicações anteriores
+---
+{% include header.html banner=false description=false %}
+<p>Publicações anteriores.</p>
+{% assign older_posts = site.posts | slice: site.posts_per_page, site.posts.size %}
+{% if older_posts.size > 0 %}
+  {% include post-list.html posts=older_posts %}
+{% else %}
+  <p>Ainda não há publicações suficientes para uma segunda página.</p>
+{% endif %}
+<nav class="pagination" aria-label="Paginação">
+  <a href="{{ '/' | relative_url }}">← anterior</a>
+  <a href="{{ '/' | relative_url }}">1</a>
+  <span class="current">2</span>
+</nav>
+{% include footer.html %}

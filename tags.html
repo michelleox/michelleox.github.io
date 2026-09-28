@@ -1,0 +1,25 @@
+---
+layout: default
+title: Tags
+---
+<nav class="top-link"><a href="{{ '/' | relative_url }}">← Voltar</a></nav>
+<h1>Tags</h1>
+{% if site.tags.size > 0 %}
+  {% assign sorted_tags = site.tags | sort %}
+  {% for tag in sorted_tags %}
+    <section class="tag-group">
+      <h2 id="{{ tag[0] | slugify }}">#{{ tag[0] }}</h2>
+      <ul class="archive-list">
+        {% for post in tag[1] %}
+          <li>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+            <a href="{{ post.url | relative_url }}">{{ post.title | downcase }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endfor %}
+{% else %}
+  <p>Ainda não há tags cadastradas nos posts.</p>
+{% endif %}
+{% include footer.html %}

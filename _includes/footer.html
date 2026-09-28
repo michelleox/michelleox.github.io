@@ -1,0 +1,10 @@
+<footer class="site-footer">
+  {% include newsletter.html %}
+  <p class="footer-links">
+    <a href="{{ '/arquivos.html' | relative_url }}">arquivos</a> ·
+    <a href="{{ '/tags.html' | relative_url }}">tags</a> ·
+    <a href="{{ '/sobre.html' | relative_url }}">sobre</a>{% if site.github_username %} ·
+    <a href="https://github.com/{{ site.github_username }}">github</a>{% endif %}
+  </p>
+  <p class="footer-copy">{{ site.title }}</p>
+</footer>

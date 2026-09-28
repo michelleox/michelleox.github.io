@@ -1,0 +1,14 @@
+---
+layout: default
+---
+{% include header.html banner=true description=true %}
+{% assign home_posts = site.posts | slice: 0, site.posts_per_page %}
+{% include post-list.html posts=home_posts %}
+{% if site.posts.size > site.posts_per_page %}
+  <nav class="pagination" aria-label="Paginação">
+    <span class="current">1</span>
+    <a href="{{ '/paginacao.html' | relative_url }}">2</a>
+    <a href="{{ '/paginacao.html' | relative_url }}">próxima →</a>
+  </nav>
+{% endif %}
+{% include footer.html %}

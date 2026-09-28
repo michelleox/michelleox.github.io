@@ -1,0 +1,12 @@
+<nav class="post-navigation" aria-label="Navegação entre publicações">
+  {% if page.previous %}
+    <a href="{{ page.previous.url | relative_url }}" rel="prev">← Voltar</a>
+  {% else %}
+    <span aria-hidden="true">← Voltar</span>
+  {% endif %}
+  {% if page.next %}
+    <a href="{{ page.next.url | relative_url }}" rel="next">Avançar →</a>
+  {% else %}
+    <span aria-hidden="true">Avançar →</span>
+  {% endif %}
+</nav>
