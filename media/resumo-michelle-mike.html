@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resumo para Mike: Michelle, Omie e fluxo de vendas</title>
+  <meta name="description" content="Resumo das capacidades já configuradas na Michelle e dos fluxos planejados para cobrança e vendas.">
+</head>
+<body>
+  <main>
+    <h1>Michelle: Omie, cobranças e vendas</h1>
+    <p>Resumo para Mike. A gravação abaixo apresenta o estado atual da integração. O texto explica também o fluxo proposto e o que ainda precisa ser implementado.</p>
+    <audio controls preload="none">
+      <source src="https://assets.morphix.pro/k9xlejxt.mp3" type="audio/mpeg">
+      Seu navegador não reproduz áudio. <a href="https://assets.morphix.pro/k9xlejxt.mp3">Baixe a gravação</a>.
+    </audio>
+    <h2>Resumo completo</h2>
+    <p><strong>O que já está configurado:</strong> Michelle usa o Hermes, tem as credenciais da API do Omie protegidas no arquivo de ambiente e uma skill para consultas somente de leitura. A consulta de clientes foi testada. A skill permite consultar dados autorizados; não libera alterações financeiras ou criação de pedidos.</p>
+    <p><strong>Cobranças por e-mail, como próxima etapa:</strong> configurar uma rotina que consulte o Omie antes de cada envio e mande lembretes sete dias antes, três dias antes, no vencimento e dois dias depois, somente se o título continuar em aberto. Usar o e-mail do cadastro e apenas um link de boleto que já exista no Omie. Registrar envios, falhas e motivos para não enviar; avisar a equipe se faltar e-mail ou boleto. Essa automação ainda não foi instalada nem validada.</p>
+    <p><strong>Atendimento e vendas por WhatsApp, como próxima etapa:</strong> fornecer à Michelle um catálogo aprovado com preços atualizados. Quando o cliente confirmar a compra, ela encaminha o resumo ao grupo de aprovação. Só depois da resposta explícita de Mike, “Aprovado, Michelle pode lançar”, poderá registrar o pedido no Omie. Faturamento, criação da rota e entrega ficam com a equipe humana. O número próprio, o catálogo, o grupo e o fluxo de aprovação ainda precisam ser configurados e testados.</p>
+    <p>Em resumo: a conexão e as consultas de leitura já existem; as automações de cobrança e o fluxo de vendas são o plano de trabalho, ainda pendentes de implementação.</p>
+  </main>
+</body>
+</html>
