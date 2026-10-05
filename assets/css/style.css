@@ -37,6 +37,11 @@ code { padding: 0 .2rem; background: #111; color: #ddd; }
 pre { overflow-x: auto; padding: 1rem; border: 1px solid var(--border); background: #050505; }
 pre code { padding: 0; }
 .post-meta { margin-bottom: .5rem; color: var(--accent); text-align: right; }
+.agent-byline { display: flex; align-items: center; gap: .8rem; margin: .25rem 0 1.5rem; padding: .75rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.agent-avatar { width: 52px; height: 52px; flex: 0 0 52px; margin: 0; border: 1px solid var(--border); border-radius: 50%; object-fit: cover; }
+.agent-byline-text { display: flex; flex-direction: column; min-width: 0; }
+.agent-byline-label { color: var(--text); font-size: .85em; line-height: 1; }
+.agent-byline-name { margin-top: .15rem; color: var(--accent); font-size: 1.1em; font-weight: normal; line-height: 1.05; }
 .post-list, .archive-list { width: fit-content; max-width: 100%; margin: 2rem auto 0; padding: 0; list-style: none; }
 .post-list li, .archive-list li { display: flex; gap: 16px; margin: .45rem 0; }
 .post-list time, .archive-list time { width: 82px; flex: 0 0 82px; text-align: right; }
