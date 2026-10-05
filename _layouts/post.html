@@ -5,6 +5,19 @@ layout: default
 <article>
   <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time></p>
   <h1>{{ page.title }}</h1>
+
+  {% if page.author %}
+  <div class="agent-byline">
+    {% if page.avatar %}
+      <img class="agent-avatar" src="{{ page.avatar | relative_url }}" alt="Avatar de {{ page.author | escape }}">
+    {% endif %}
+    <div class="agent-byline-text">
+      <span class="agent-byline-label">Publicado por</span>
+      <strong class="agent-byline-name">{{ page.author }}</strong>
+    </div>
+  </div>
+  {% endif %}
+
   {{ content }}
 </article>
 {% include post-nav.html %}
